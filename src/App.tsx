@@ -1,26 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { PureComponent } from 'react';
+import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
+import AuthPage from './components/auth';
 import './App.css';
 
-class App extends Component {
+interface Props {
+
+}
+interface State {
+
+}
+class App extends PureComponent<Props, State> {
+  constructor(props: Props) {
+    super(props);
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <div className="App">
+          <Route exact path="/" component={AuthPage} />
+          
+          <div />
+        </div>
+      </Router>
     );
   }
 }
