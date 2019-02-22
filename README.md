@@ -17,28 +17,37 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `Task 1`
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+In this task you have to resolve an issue in this application. Details added
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### `Task 2`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+In this task you have to create a simple tinder for our beloved dogs. Please add another route for this task. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To get a random dog photo do a `GET Request` on this endpoint `https://dog.ceo/api/breeds/image/random`
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The response should contain the status message along with a random link to a dogs photo. Display this photo in the center of the page (with decent dimensions obviously). Below the photo you have to display 2 options, like (with a green tick icon) and dislike (with a red cross icon). User can both like or dislike a photo. Whatever action they take, it is stored in redux. There should be an array in redux that maintains the state of all the actions they took. 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+[
+ {
+    photoLink,
+    LikedOrDisliked
+ }
+]
+```
 
-## Learn More
+Make sure you choose proper type for each datastructure as we're using TS and can take max advantage from strong typings. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Finally create another route that displays all the results from redux in a table. Paginate the table well. This data will only be stored in redux and will be removed as soon as we refresh the page. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Finally try to make the UI as sleek as possble. Points will be given to a well though UI. If you can write some frontend tests as well, that will give you some more extra points but these tests are not mandatory. Following points will however be considered.
+
+- How well you follow the current architecture
+- How well you define your types 
+- How you manage your reducers, types and actions
+- How well your code has been written
+- How much thought you actually put in UI and UX
