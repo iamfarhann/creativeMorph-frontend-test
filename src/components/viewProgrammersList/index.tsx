@@ -1,11 +1,7 @@
 import * as React from 'react';
-import authAction from '../../state/auth/actions';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import { Button } from 'reactstrap';
 import CardHeader from '@material-ui/core/CardHeader';
 import Avatar from '@material-ui/core/Avatar';
@@ -13,7 +9,6 @@ import programmersAction from '../../state/programmer/actions';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Slider from '@material-ui/lab/Slider';
 const { GetProgrammers, AddProgrammer, RemoveProgrammer, ChangeLevelValue } = programmersAction;
-import Typography from '@material-ui/core/Typography';
 import { bindActionCreators, Dispatch } from 'redux';
 import { AppState } from '../../state';
 import { connect } from 'react-redux';
@@ -27,6 +22,9 @@ const styles = (theme: any) => ({
   },
   actions: {
     display: 'flex',
+  },
+  subheader: {
+    fontSize: 18
   },
   avatar: {
     backgroundColor: red[500],
@@ -87,6 +85,9 @@ class ViewProgrammers extends React.PureComponent<any, any> {
                         P
                       </Avatar>
                     }
+                    classes={{
+                      subheader: classes.subheader,
+                    }}
                     title={element.name}
                     subheader={`Skill level ${element.level}`}
                     action={
