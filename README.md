@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Test details
+
+In order to take this test, please create a fork of this repo from your own github profile and push all the changes there in your forked repo. Once you have completed all the tasks, send a link of this forked repo, with all your changes pushed to masoodtalha7@gmail.com. Please note that no other form of submission will be considered. 
 
 ## Available Scripts
 
@@ -20,7 +22,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `Task 1`
 
-In this task you have to resolve an issue in this application. Details added
+In this task you have to resolve an issue in this application. Please navigate to the page `http://localhost:3000/view-programmers`. Here you will find a list of programmers with a name and a skill level. Clicking on the `Add` button on any of these programmers copies them into a new with a slider that can change the skill level of this newly copied programmer. The problem is that when we try to change the skill level of this newly added programmer, the original skill number also changes. This is not right. Please fix this issue!
 
 
 ### `Task 2`
