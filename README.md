@@ -42,7 +42,7 @@ The response should contain the status message along with a random link to a dog
 ]
 ```
 
-Make sure you choose proper type for each datastructure as we're using TS and can take max advantage from strong typings. 
+Make sure you choose proper type for each data structure as we're using TS and can take max advantage from strong typings. 
 
 Finally create another route that displays all the results from redux in a table. Paginate the table well. This data will only be stored in redux and will be removed as soon as we refresh the page. 
 
