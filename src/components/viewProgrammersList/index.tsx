@@ -75,7 +75,7 @@ class ViewProgrammers extends React.PureComponent<any, any> {
       <div style={{ padding: '2%' }}>
         {loader && <CircularProgress />}
         {programmersArray.length > 0 && (
-          <Grid container spacing={24}>
+          <Grid container spacing={3}>
             {programmersArray.map((element: Programmer) => (
               <Grid item xs={12} sm={4}>
                 <Card className={classes.card}>
@@ -108,7 +108,7 @@ class ViewProgrammers extends React.PureComponent<any, any> {
           <div>
             <h2 style={{ textAlign: 'center' }}>Selected Programmers</h2>
             {selectedProgrammersArray.length > 0 && (
-              <Grid container spacing={24}>
+              <Grid container spacing={3}>
                 {selectedProgrammersArray.map((element: Programmer) => (
                   <Grid item xs={12} sm={4}>
                     <Card className={classes.card}>
