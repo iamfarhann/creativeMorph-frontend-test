@@ -58,7 +58,9 @@ const AddProgrammer = (name: string) => {
     const filteredArray = filterProgrammerArray(name);
     const successPayload = {
       loader: false,
-      selectedProgrammersArray: filteredArray[0],
+      selectedProgrammersArray: JSON.parse(JSON.stringify(filteredArray[0])),
+      //value was not clonned before it was passed by referrence 
+      //i.e shallow copying, used JSON.stringify and JSON.parse to make deep copying/deep clone
       isSecondTabOpen: true,
     };
     dispatch(requestSuccess(successPayload));
